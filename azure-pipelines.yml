@@ -1,6 +1,5 @@
 # I manually edited this file to try and get around Azure parallelism
 # restrictions
-jobs:
 - job: linux
   pool:
     vmImage: ubuntu-latest
