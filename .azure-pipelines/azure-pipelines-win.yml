@@ -14,6 +14,7 @@ jobs:
       win_64_openssl3:
         CONFIG: win_64_openssl3
         UPLOAD_PACKAGES: 'True'
+    maxParallel: 1
   timeoutInMinutes: 360
   variables:
     CONDA_BLD_PATH: D:\\bld\\

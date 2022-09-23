@@ -20,6 +20,7 @@ jobs:
       osx_arm64_openssl3:
         CONFIG: osx_arm64_openssl3
         UPLOAD_PACKAGES: 'True'
+    maxParallel: 1
   timeoutInMinutes: 360
 
   steps:
