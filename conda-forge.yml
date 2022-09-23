@@ -1,4 +1,5 @@
 azure:
+  max_parallel: 1
   settings_win:
     pool:
       vmImage: windows-2019
