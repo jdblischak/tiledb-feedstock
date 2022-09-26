@@ -1,5 +1,5 @@
 {% set name = "TileDB" %}
-{% set version = "2022-09-26" %}
+{% set version = "2022_09_26" %}
 
 package:
   name: tiledb
