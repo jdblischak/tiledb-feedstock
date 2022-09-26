@@ -23,30 +23,12 @@ Current build status
 ====================
 
 
-<table>
-    
-  <tr>
-    <td>Azure</td>
+<table><tr>
+    <td>CircleCI</td>
     <td>
-      <details>
-        <summary>
-          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=2075&branchName=nightlies">
-            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tiledb-feedstock?branchName=nightlies">
-          </a>
-        </summary>
-        <table>
-          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
-          <tbody><tr>
-              <td>linux_64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=2075&branchName=nightlies">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tiledb-feedstock?branchName=nightlies&jobName=linux&configuration=linux_64_" alt="variant">
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </details>
+      <a href="https://circleci.com/gh/conda-forge/tiledb-feedstock">
+        <img alt="Linux" src="https://img.shields.io/circleci/project/github/conda-forge/tiledb-feedstock/nightlies.svg?label=Linux">
+      </a>
     </td>
   </tr>
 </table>
