@@ -1,13 +1,14 @@
 {% set name = "TileDB" %}
-{% set version = "2.11.2" %}
+{% set version = "2022-09-26" %}
 
 package:
   name: tiledb
   version: {{ version }}
 
 source:
-  url: https://github.com/TileDB-Inc/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 72f1d1451d9087ea5095f96137323f50b55e0542faae80dddd61a084612e8106
+  git_url: https://github.com/TileDB-Inc/{{ name }}.git
+  git_rev: dev
+  git_depth: 1
 
 build:
   number: 0
