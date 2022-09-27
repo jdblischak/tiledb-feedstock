@@ -1,8 +1,9 @@
 provider:
-  linux_64: ["azure", "circle"]
+  linux_64: ["azure"]
   osx_64: ["azure"]
   win_64: ["azure"]
 github:
   user: jdblischak
   repo_name: tiledb-feedstock
   branch_name: nightlies
+conda_forge_output_validation: False
