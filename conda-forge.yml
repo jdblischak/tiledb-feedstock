@@ -1,7 +1,7 @@
 provider:
-  linux_64: ["circle"]
-  osx_64: None
-  win_64: None
+  linux_64: ["azure", "circle"]
+  osx_64: ["azure"]
+  win_64: ["azure"]
 github:
   user: jdblischak
   repo_name: tiledb-feedstock
