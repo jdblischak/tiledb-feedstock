@@ -31,6 +31,45 @@ Current build status
       </a>
     </td>
   </tr>
+    
+  <tr>
+    <td>Azure</td>
+    <td>
+      <details>
+        <summary>
+          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=2075&branchName=nightlies">
+            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tiledb-feedstock?branchName=nightlies">
+          </a>
+        </summary>
+        <table>
+          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
+          <tbody><tr>
+              <td>linux_64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=2075&branchName=nightlies">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tiledb-feedstock?branchName=nightlies&jobName=linux&configuration=linux_64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=2075&branchName=nightlies">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tiledb-feedstock?branchName=nightlies&jobName=osx&configuration=osx_64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=2075&branchName=nightlies">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tiledb-feedstock?branchName=nightlies&jobName=win&configuration=win_64_" alt="variant">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
+    </td>
+  </tr>
 </table>
 
 Current release info
