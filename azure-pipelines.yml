@@ -29,18 +29,26 @@ jobs:
   - script: |
       git checkout main
       git checkout -B nightly-build main
+
+      # Bump version
       version_current=$(curl -sL https://raw.githubusercontent.com/TileDB-Inc/TileDB/dev/tiledb/sm/c_api/tiledb_version.h | grep '#define' | cut -d' ' -f3 | tr '\n' '.')
       version="${version_current}$(date +%Y_%m_%d)"
       sed -i \
         s/"{% set version = \".*\" %}"/"{% set version = \"$version\" %}"/ \
         recipe/meta.yaml
+
+      # Disable conda-forge validation
+      echo "conda_forge_output_validation: False" >> conda-forge.yml
+
+      # Change upload channel
+      echo -e "channel_targets:\n  - jdblischak nightlies" >> recipe/conda_build_config.yaml
+
       git diff
-      # Push update to GitHub
-      git config --get user.name
-      git config --get user.email
-      git config --list
-      git config --local user.name "Azure Pipelines"
-      git add recipe/meta.yaml
-      git commit --allow-empty -m "Nightly build for $version"
-      # git push origin nightly-build
     displayName: Bump nightly version
+  - script: |
+      git config --local user.name "Azure Pipelines"
+      git config --local user.email "azure@microsoft.com" # fake, but consistent email
+      git add conda-forge.yml recipe/conda_build_config.yaml recipe/meta.yaml
+      git commit -m "Nightly build for $version"
+      # git push origin nightly-build
+    displayName: Push to GitHub
