@@ -7,13 +7,13 @@
 #   - template: ./.azure-pipelines/azure-pipelines-win.yml
 #   - template: ./.azure-pipelines/azure-pipelines-osx.yml
 
-schedules:
-- cron: "*/1 * * * *"
-  displayName: Run on a schedule
-  branches:
-    include:
-    - nightlies-azure
-  always: true
+# schedules:
+# - cron: "*/1 * * * *"
+#   displayName: Run on a schedule
+#   branches:
+#     include:
+#     - nightlies-azure
+#   always: true
 
 pool:
   vmImage: "ubuntu-latest"
