@@ -30,6 +30,7 @@ jobs:
       git branch
       git fetch origin
       git branch
+      git checkout main
       git checkout -B nightly-build main
       version_current=$(curl -sL https://raw.githubusercontent.com/TileDB-Inc/TileDB/dev/tiledb/sm/c_api/tiledb_version.h | grep '#define' | cut -d' ' -f3 | tr '\n' '.')
       version="${version_current}$(date +%Y_%m_%d)"
