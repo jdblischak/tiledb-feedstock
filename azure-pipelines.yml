@@ -2,7 +2,17 @@
 # update the conda-forge.yml and/or the recipe/meta.yaml.
 # -*- mode: yaml -*-
 
+# jobs:
+#   - template: ./.azure-pipelines/azure-pipelines-linux.yml
+#   - template: ./.azure-pipelines/azure-pipelines-win.yml
+#   - template: ./.azure-pipelines/azure-pipelines-osx.yml
+
+pool:
+  vmImage: "ubuntu-latest"
+
+
 jobs:
-  - template: ./.azure-pipelines/azure-pipelines-linux.yml
-  - template: ./.azure-pipelines/azure-pipelines-win.yml
-  - template: ./.azure-pipelines/azure-pipelines-osx.yml
+- job: Test
+  steps:
+  - script: TZ="America/New_York" echo "I ran at $(date)"
+    displayName: Report date and time
