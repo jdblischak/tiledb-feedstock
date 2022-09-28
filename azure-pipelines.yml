@@ -51,7 +51,7 @@ jobs:
       git add conda-forge.yml recipe/conda_build_config.yaml recipe/meta.yaml
       git commit -m "Nightly build for $version"
       git remote -v
-      git push https://$GITHUB_PAT@github.com/jdblischak/tiledb-feedstock.git nightly-build
+      git push https://${GITHUB_PAT}@github.com/jdblischak/tiledb-feedstock.git nightly-build
     displayName: Bump nightly version
     env:
       GITHUB_PAT: $(GITHUB_PAT)
