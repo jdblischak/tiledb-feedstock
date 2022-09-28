@@ -26,3 +26,18 @@ jobs:
       sudo timedatectl set-timezone "America/New_York"
       echo "I ran at $(date)"
     displayName: Report date and time
+  - script: |
+      echo "date: $(date)"
+      version_current=$(curl -sL https://raw.githubusercontent.com/TileDB-Inc/TileDB/dev/tiledb/sm/c_api/tiledb_version.h | grep '#define' | cut -d' ' -f3 | tr '\n' '.')
+      version="${version_current}$(date +%Y_%m_%d)"
+      sed -i \
+        s/"{% set version = \".*\" %}"/"{% set version = \"$version\" %}"/ \
+        recipe/meta.yaml
+      git diff
+      # Push update to GitHub
+      git config --local user.name "Azure Pipelines"
+      git config --local user.email "runneradmin@github.com"
+      git add recipe/meta.yaml
+      git commit --allow-empty -m "Nightly build for $version"
+      # git push origin <branch>
+    displayName: Bump nightly version
