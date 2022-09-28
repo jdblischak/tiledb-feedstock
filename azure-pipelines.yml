@@ -27,9 +27,6 @@ jobs:
       echo "date: $(date)"
     displayName: Report date and time
   - script: |
-      git branch
-      git fetch origin
-      git branch
       git checkout main
       git checkout -B nightly-build main
       version_current=$(curl -sL https://raw.githubusercontent.com/TileDB-Inc/TileDB/dev/tiledb/sm/c_api/tiledb_version.h | grep '#define' | cut -d' ' -f3 | tr '\n' '.')
@@ -41,8 +38,8 @@ jobs:
       # Push update to GitHub
       git config --get user.name
       git config --get user.email
+      git config --list
       git config --local user.name "Azure Pipelines"
-      git config --local user.email "runneradmin@github.com"
       git add recipe/meta.yaml
       git commit --allow-empty -m "Nightly build for $version"
       # git push origin nightly-build
