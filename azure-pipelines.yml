@@ -52,7 +52,8 @@ jobs:
       git commit -m "Nightly build for $version"
       git remote -v
       gh auth login
-      git push origin nightly-build
+      gh auth status
+      git push https://jdblischak@github.com/jdblischak/tiledb-feedstock.git nightly-build
     displayName: Bump nightly version
     env:
       GITHUB_TOKEN: $(GITHUB_PAT)
