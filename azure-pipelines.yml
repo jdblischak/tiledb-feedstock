@@ -50,5 +50,6 @@ jobs:
       git config --local user.email "azure@microsoft.com" # fake, but consistent email
       git add conda-forge.yml recipe/conda_build_config.yaml recipe/meta.yaml
       git commit -m "Nightly build for $version"
-      # git push origin nightly-build
+      git remote -v
+      git push origin nightly-build
     displayName: Bump nightly version
