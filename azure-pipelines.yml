@@ -7,6 +7,7 @@
 #   - template: ./.azure-pipelines/azure-pipelines-win.yml
 #   - template: ./.azure-pipelines/azure-pipelines-osx.yml
 
+schedules:
 - cron: "*/1 * * * *"
   displayName: Run on a schedule
   branches:
