@@ -14,5 +14,7 @@ pool:
 jobs:
 - job: Test
   steps:
-  - script: TZ="America/New_York" echo "I ran at $(date)"
+  - script: |
+      sudo timedatectl set-timezone "America/New_York"
+      echo "I ran at $(date)"
     displayName: Report date and time
