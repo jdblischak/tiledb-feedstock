@@ -32,7 +32,7 @@ jobs:
 
       # Bump version
       version_current=$(curl -sL https://raw.githubusercontent.com/TileDB-Inc/TileDB/dev/tiledb/sm/c_api/tiledb_version.h | grep '#define' | cut -d' ' -f3 | tr '\n' '.')
-      version="${version_current}$(date +%Y_%m_%d)"
+      export version="${version_current}$(date +%Y_%m_%d)"
       sed -i \
         s/"{% set version = \".*\" %}"/"{% set version = \"$version\" %}"/ \
         recipe/meta.yaml
