@@ -60,7 +60,7 @@ jobs:
       echo $GITHUB_PAT > mytoken.txt
       gh auth login --git-protocol HTTPS --with-token < mytoken.txt
       gh auth status
-      git push https://jdblischak@github.com/jdblischak/tiledb-feedstock.git nightly-build
+      git push https://github.com/jdblischak/tiledb-feedstock.git nightly-build
     displayName: Bump nightly version
     env:
       GITHUB_PAT: $(GITHUB_PAT)
