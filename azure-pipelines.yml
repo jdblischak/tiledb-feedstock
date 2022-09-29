@@ -58,8 +58,6 @@ jobs:
         echo "GITHUB_PAT has length ${#GITHUB_PAT}"
       fi
       echo $GITHUB_PAT > mytoken.txt
-      # I just deleted the PAT on GitHub, so I just want to see the formatting
-      cat mytoken.txt
       gh auth login --git-protocol HTTPS --with-token < mytoken.txt
       gh auth status
       git push https://jdblischak@github.com/jdblischak/tiledb-feedstock.git nightly-build
