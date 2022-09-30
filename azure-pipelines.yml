@@ -57,10 +57,7 @@ jobs:
       else
         echo "GITHUB_PAT has length ${#GITHUB_PAT}"
       fi
-      echo $GITHUB_PAT > mytoken.txt
-      gh auth login --git-protocol HTTPS --with-token < mytoken.txt
-      gh auth status
-      git push https://github.com/jdblischak/tiledb-feedstock.git nightly-build
+      git push https://jdblischak:${GITHUB_PAT}@github.com/jdblischak/tiledb-feedstock.git nightly-build
     displayName: Bump nightly version
     env:
       GITHUB_PAT: $(GITHUB_PAT)
