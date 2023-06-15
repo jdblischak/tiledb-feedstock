@@ -3,6 +3,11 @@
 # -*- mode: yaml -*-
 
 jobs:
-  - template: ./.azure-pipelines/azure-pipelines-linux.yml
-  - template: ./.azure-pipelines/azure-pipelines-win.yml
-  - template: ./.azure-pipelines/azure-pipelines-osx.yml
+  - job: top-level-linux
+    - template: ./.azure-pipelines/azure-pipelines-linux.yml
+  - job: top-level-win
+    dependsOn: [top-level-linux]
+    - template: ./.azure-pipelines/azure-pipelines-win.yml
+  - job: top-level-osx
+    dependsOn: [top-level-win]
+    - template: ./.azure-pipelines/azure-pipelines-osx.yml
