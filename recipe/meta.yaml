@@ -10,8 +10,10 @@ source:
   git_url: https://github.com/TileDB-Inc/{{ name }}.git
   git_rev: 937a67600e5b1f52e92aa63e2d7cc518272e2c3e
   git_depth: 10
+{% if version == "2.16.3" %}
   patches:
     - 0001-LibXML2-needs-to-be-linked-after-Azure-libraries.patch
+{% endif %}
 
 build:
   number: 0
