@@ -3,9 +3,9 @@ bzip2:
 cdt_name:
 - cos7
 channel_sources:
-- conda-forge
+- conda-forge,tiledb/label/nightlies
 channel_targets:
-- conda-forge main
+- tiledb nightlies
 curl:
 - '8'
 cxx_compiler:
