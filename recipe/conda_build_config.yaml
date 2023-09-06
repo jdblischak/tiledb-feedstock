@@ -23,3 +23,7 @@ zip_keys:
 - gcs
 - openssl
 - curl
+channel_sources:
+  - conda-forge,tiledb/label/nightlies
+channel_targets:
+  - tiledb nightlies

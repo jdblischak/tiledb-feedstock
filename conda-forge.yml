@@ -19,3 +19,4 @@ provider:
 test_on_native_only: true
 travis:
   osx_image: xcode6.4
+conda_forge_output_validation: False
