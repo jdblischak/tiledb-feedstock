@@ -4,12 +4,14 @@ aws_sdk_cpp:
 - 1.11.267
 bzip2:
 - '1'
+c_stdlib:
+- vs
 channel_sources:
-- conda-forge
+- tiledb/label/nightlies,conda-forge
 channel_targets:
-- conda-forge main
+- tiledb nightlies
 cxx_compiler:
-- vs2019
+- vs2022
 fmt:
 - '10'
 libabseil:
