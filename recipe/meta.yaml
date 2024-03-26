@@ -1,13 +1,14 @@
 {% set name = "TileDB" %}
-{% set version = "2.21.1" %}
+{% set version = "2.22.0.2024_03_26" %}
 
 package:
   name: tiledb
   version: {{ version }}
 
 source:
-  url: https://github.com/TileDB-Inc/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 24d50ebd5ac211d92a328be3f2988aed5c91c82123583ad6833e2ab7b6bdb454
+  git_url: https://github.com/TileDB-Inc/{{ name }}.git
+  git_rev: f1629d1426cd40f93397cc1047fd247d1723d8a3
+  git_depth: 10
   patches:
     # This patch removes the find_package(LZ4) call and falls back to the pre-vcpkg
     # mechanism of using find_library.
@@ -20,7 +21,7 @@ source:
     - lz4-fix.patch
 
 build:
-  number: 1
+  number: 0
   run_exports:
     # https://abi-laboratory.pro/?view=timeline&l=tiledb
     - {{ pin_subpackage('tiledb', max_pin='x.x') }}
@@ -40,6 +41,7 @@ requirements:
     # These are declared as vcpkg dependencies by TileDB but are not actually used.
     - libxml2  # [not win]
   host:
+    - azure-identity-cpp
     - aws-sdk-cpp
     - aws-crt-cpp
     - azure-core-cpp
