@@ -18,7 +18,6 @@ source:
     # a different casing of the target's name from vcpkg.
     # After lz4 publishes a unified CMake target with https://github.com/lz4/lz4/pull/1372,
     # we will have to align Conda, vcpkg and TileDB, and then we can remove this patch.
-    - lz4-fix.patch
 
 build:
   number: 0
