@@ -19,3 +19,4 @@ test: native_and_emulated
 travis:
   osx_image: xcode6.4
 conda_forge_output_validation: False
+upload_on_branch: main
