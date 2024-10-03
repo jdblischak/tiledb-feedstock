@@ -7,7 +7,7 @@ package:
 
 source:
   git_url: https://github.com/TileDB-Inc/{{ name }}.git
-  git_rev: c44fb49ddb8d8f1015e97f28d28ebada9f252ccc
+  git_rev: teo/libmagic-cross-compile-fix
   git_depth: 10
 
 build:
