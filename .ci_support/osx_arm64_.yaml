@@ -1,5 +1,27 @@
 MACOSX_SDK_VERSION:
 - '12.0'
+aws_c_auth:
+- '1.0'
+aws_c_cal:
+- '1.0'
+aws_c_common:
+- '1.0'
+aws_c_compression:
+- '1.0'
+aws_c_event_stream:
+- '1.0'
+aws_c_http:
+- '1.0'
+aws_c_io:
+- '1.0'
+aws_c_mqtt:
+- '1.0'
+aws_c_s3:
+- '1.1'
+aws_c_sdkutils:
+- '1.0'
+aws_checksums:
+- '1.0'
 aws_crt_cpp:
 - 0.43.8
 aws_sdk_cpp:
@@ -52,6 +74,8 @@ macos_machine:
 - arm64-apple-darwin20.0.0
 openssl:
 - '3.5'
+s2n:
+- 1.7.6
 spdlog:
 - '1.17'
 target_platform:
