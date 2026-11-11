@@ -74,8 +74,6 @@ macos_machine:
 - arm64-apple-darwin20.0.0
 openssl:
 - '3.5'
-s2n:
-- 1.7.6
 spdlog:
 - '1.17'
 target_platform:

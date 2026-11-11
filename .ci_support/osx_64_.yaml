@@ -74,8 +74,6 @@ macos_machine:
 - x86_64-apple-darwin13.4.0
 openssl:
 - '3.5'
-s2n:
-- 1.7.6
 spdlog:
 - '1.17'
 target_platform:
