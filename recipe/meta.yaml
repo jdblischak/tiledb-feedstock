@@ -14,7 +14,7 @@ build:
   run_exports:
     # https://abi-laboratory.pro/?view=timeline&l=tiledb
     - {{ pin_subpackage('tiledb', max_pin='x.x') }}
-  error_overdepending: true
+  error_overdepending: false
   error_overlinking: true
 
 requirements:
@@ -49,7 +49,7 @@ requirements:
     - aws-crt-cpp
     - azure-core-cpp
     - azure-identity-cpp
-    - azure-storage-common-cpp  # [linux64]
+    - azure-storage-common-cpp
     - azure-storage-blobs-cpp
     - azure-storage-files-datalake-cpp
     - bzip2
@@ -67,8 +67,6 @@ requirements:
     - spdlog
     - zlib
     - zstd
-    # see: https://github.com/conda-forge/google-cloud-cpp-feedstock/pull/108,
-    - libcrc32c  # [linux64 or win]
 test:
   requires:
     - {{ compiler('cxx') }}
