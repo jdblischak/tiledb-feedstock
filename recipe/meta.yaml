@@ -15,7 +15,7 @@ build:
     # https://abi-laboratory.pro/?view=timeline&l=tiledb
     - {{ pin_subpackage('tiledb', max_pin='x.x') }}
   error_overdepending: false
-  error_overlinking: true
+  error_overlinking: true  # [not osx]
 
 requirements:
   build:
@@ -34,17 +34,17 @@ requirements:
     # Header-only library.
     - nlohmann_json
   host:
-    - aws-c-auth  # [linux64]
-    - aws-c-cal  # [linux64]
+    - aws-c-auth
+    - aws-c-cal
     - aws-c-common
-    - aws-c-compression  # [linux64]
-    - aws-c-event-stream  # [linux64]
-    - aws-c-http  # [linux64]
-    - aws-c-io  # [linux64]
-    - aws-c-mqtt  # [linux64]
-    - aws-c-s3  # [linux64]
-    - aws-c-sdkutils  # [linux64]
-    - aws-checksums  # [linux64]
+    - aws-c-compression
+    - aws-c-event-stream
+    - aws-c-http
+    - aws-c-io
+    - aws-c-mqtt
+    - aws-c-s3
+    - aws-c-sdkutils
+    - aws-checksums
     - aws-sdk-cpp
     - aws-crt-cpp
     - azure-core-cpp
@@ -54,16 +54,16 @@ requirements:
     - azure-storage-files-datalake-cpp
     - bzip2
     - c-blosc2
-    - capnproto  # [not win]
+    - capnproto
     - fmt
-    - libabseil  # [linux64 or win]
-    - libgoogle-cloud-devel  # [not win]
+    - libabseil
+    - libgoogle-cloud-devel
     - libgoogle-cloud-storage-devel
     - libcurl
     - libwebp-base
     - lz4-c
-    - openssl  # [not win]
-    - s2n  # [linux64]
+    - openssl
+    - s2n
     - spdlog
     - zlib
     - zstd
