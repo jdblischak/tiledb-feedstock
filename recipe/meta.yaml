@@ -32,6 +32,7 @@ requirements:
     - capnproto
     # Header-only library.
     - nlohmann_json
+    - lz4-c  # [build_platform != target_platform]
   host:
     - aws-sdk-cpp
     - aws-crt-cpp
