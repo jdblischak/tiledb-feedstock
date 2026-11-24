@@ -15,7 +15,7 @@ azure_storage_files_datalake_cpp:
 bzip2:
 - '1'
 c_blosc2:
-- '3.6'
+- '3.7'
 c_stdlib:
 - vs
 capnproto:
@@ -25,7 +25,9 @@ channel_sources:
 channel_targets:
 - tiledb nightlies
 cxx_compiler:
-- vs2022
+- vs
+cxx_compiler_version:
+- '2022'
 fmt:
 - '12.1'
 libabseil:
@@ -35,13 +37,13 @@ libcrc32c:
 libcurl:
 - '8'
 libgoogle_cloud_devel:
-- '3.12'
+- '3.14'
 libgoogle_cloud_storage_devel:
-- '3.12'
+- '3.14'
 libwebp_base:
 - '1'
 lz4_c:
-- '1.10'
+- '1.11'
 openssl:
 - '3.5'
 spdlog:
